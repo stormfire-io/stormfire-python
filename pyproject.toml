@@ -1,0 +1,64 @@
+[build-system]
+requires = ["hatchling>=1.21.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "stormfire"
+version = "0.1.0"
+description = "Pay AI APIs (OpenAI, Claude, Gemini) in USDT — drop-in OpenAI SDK replacement."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Stormfire", email = "founder@stormfire.io" }]
+keywords = [
+    "ai",
+    "openai",
+    "claude",
+    "gemini",
+    "llm",
+    "gpt",
+    "openrouter",
+    "usdt",
+    "crypto-payment",
+    "stormfire",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "openai>=1.50.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "ruff>=0.6",
+    "mypy>=1.10",
+]
+
+[project.urls]
+Homepage = "https://stormfire.io"
+Documentation = "https://stormfire.io/docs"
+Repository = "https://github.com/stormfire-io/stormfire-python"
+Issues = "https://github.com/stormfire-io/stormfire-python/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["stormfire"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
