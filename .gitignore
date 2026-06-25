@@ -12,3 +12,13 @@ venv/
 htmlcov/
 .env
 .DS_Store
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+__pycache__/
+*.py[cod]
